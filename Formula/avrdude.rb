@@ -19,6 +19,8 @@ class Avrdude < Formula
   depends_on "libelf"
   depends_on "libhid" => :optional
 
+  # Fix bug with LUFA AVRISP-MKII
+  # See https://savannah.nongnu.org/bugs/?40831
   patch :p0 do
     url "https://savannah.nongnu.org/file/endpointdetect_pass1.patch?file_id=32171"
     sha256 "cd90bc4e0bad83b293bdd934593c894caad6e0c73924c5eda60ea5365e49b127"
